@@ -33,7 +33,7 @@
 	    position: absolute;
         right: 15px;
         top: 102px;
-        width: 320px;
+        width: 305px;
         background-color: rgba(100, 150, 110, 0.5);
 	}
 	.payment-opt-list li{
@@ -48,6 +48,17 @@
 		display: block;
 	}
 	.nav-list-item{
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 500px){
+	.logo-img{
+		width: 190px;
+	}
+	.money-bag-img{
+		width: 120px;
+	}
+	.login-form-field{
 		width: 100%;
 	}
 }
