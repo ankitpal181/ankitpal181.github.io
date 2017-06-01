@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="css/AWE_Default_01.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+	    <link rel='stylesheet' href='css/main.css'>
+	    <link rel='stylesheet' href='css/responsive.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+	    <header>
+		<div class="container-fluid">
+		<div class="container">
+		<div class="row">
+		    <div class="col-xs-6">
+			    <a href="http://machinetoolbids.com"><img src="images/logo.png" class="logo-img"></a>
+			</div>
+		    <div class="col-xs-6">
+			<button class="btn btn-default nav-btn" onclick="toggleNav()"><span class="fa fa-navicon"></span></button>
+			<nav id="main-nav-list">
+			    <ul class="upper-nav">
+				    <li><a href="/Account/LogOn?returnUrl=%2FBrowse" class="signin-link">SIGN IN</a><a href="/Account/Register" class="signup-link">SIGN UP</a></li>
+				    <a href="http://machinetoolbids.com/contact-us"><li>CONTACT US</li></a>
+				</ul>
+				<ul class="lower-nav">
+				    <a href="http://machinetoolbids.com/buying"><li>BUYING</li></a>
+				    <a href="http://machinetoolbids.com/selling"><li>SELLING</li></a>
+				    <a><li>SERVICES</li></a>
+				    <a><li>MARKETPLACE</li></a>
+				    <a href="/Browse"><li>AUCTION</li></a>
+				    <li style="padding-left:18px;">
+                        <div class="">
+                            <form action="/Search" method="get" class="search-form">
+    							<label for="FullTextQuery1">
+                                    <button type="button" style="background-color:transparent;border:0px;" id="search-btn" onclick="search_field_toggle();">
+                                        <i class="fa fa-search show-if-fixed"></i>
+                                    </button>
+                                </label>
+								<div id="search-field-area">
+                                    <input class="search-field" id="FullTextQuery1" name="FullTextQuery" placeholder="Search" type="text" value="" />
+								</div>
+							</form>
+                        </div>
+					</li>
+				</ul>
+			</nav>
+			</div>
+		</div>
+		</div>
+		</div>
+		</header>
+		<article>
+		    <main class="main" style="padding-top:20px;">
+                <div class="container">
+                    <div class="awe-rt-SystemMessage"></div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Sign In</div>
+                                <div class="panel-body">
+                                    <form action="/Account/LogOn?ReturnUrl=/Browse" method="post">
+                                        <div class="form-horizontal">
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Username</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" id="username" name="username" type="text" value="" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Password</label>
+                                                <div class="col-md-10">
+                                                    <input class="form-control" id="password" name="password" type="password" value="" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-offset-2 col-md-10">
+                                                    <div class="checkbox">
+                                                        <label><input id="rememberMe" name="rememberMe" type="checkbox" value="true" /><input name="rememberMe" type="hidden" value="false" />Remember Me</label>
+                                                        <input type="submit" value="Sign In" class="btn btn-primary pull-right" />
+                                                    </div>
+                                                    <a href="/Account/ForgotPassword">Forgot Your Password?</a>
+                                                </div>
+                                            </div>
+                                        </div>
+									</form>
+								</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <h2><span style="font-size:22px;">Not Registered?</span></h2>
+                            <p><span style="font-size:22px;"><u><strong><a href="Account/Register"><span style="color:#FF0000;">Register Now</span></a></strong></u></span></p>
+                            <p><em>Can&#39;t log in? Contact us at contact@machinetoolbids.com.<br />
+                            Please include the email address you used to register.</em></p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+		</article>
+		<footer>
+		<div class="container-fluid">
+		<div class="container">
+		    <div class="row">
+			    <div class="col-sm-3 footer-nav-area">
+				    <p class="footer-nav-heading">GENERAL INFORMATION</p>
+				    <ul class="footer-nav">
+					    <a><li>About Our Company</li></a>
+					    <a><li>Noteworthy News & Events</li></a>
+					    <a><li>Join Our Team</li></a>
+					    <a><li>Blog</li></a>
+					</ul>
+				</div>
+			    <div class="col-sm-2 footer-nav-area">
+				    <p class="footer-nav-heading">SUPPORT</p>
+				    <ul class="footer-nav">
+					    <a><li>Get Assistance</li></a>
+					    <a><li>FAQ's</li></a>
+					    <a><li>Privacy</li></a>
+					    <a><li>Terms & Conditions</li></a>
+					</ul>
+				</div>
+			    <div class="col-sm-3">
+				    <p class="footer-nav-heading">TRANSACTION SERVICES</p>
+				    <ul class="footer-nav">
+					    <a><li>Machinery Financing</li></a>
+					    <a><li>Machinery Removal & Transport</li></a>
+					</ul>
+				</div>
+			    <div class="col-sm-4 footer-nav-area-last">
+				    <p class="footer-nav-heading">ASSET MANAGEMENT</p>
+				    <ul class="footer-nav">
+					    <a><li>Online / Onsite Auctions</li></a>
+					    <a><li>Online Private Sales Events</li></a>
+					    <a><li>Plant Liquidations & Consolidations</li></a>
+					    <a><li>Procurement & Sourcing</li></a>
+					</ul>
+				</div>
+			</div>
+			<div class="row copyright">
+			    <div class="col-sm-6">
+				    <p class="copyright-para">MMI Direct 2017 All Rights Reserved</p>
+				</div>
+			    <div class="col-sm-6">
+				    <ul class="follow-list">
+					    <a href="https://www.facebook.com/MachineToolBids01" target="_BLANK"><li><span class="fa fa-facebook"></span></li></a>
+					    <a href="https://twitter.com/machinetoolbids" target="_BLANK"><li><span class="fa fa-twitter"></span></li></a>
+					    <a><li><span class="fa fa-linkedin"></span></li></a>
+					    <a href="https://plus.google.com/u/0/b/112028255110690283373/112028255110690283373/posts" target="_BLANK"><li><span class="fa fa-google-plus"></span></li></a>
+					</ul>
+				</div>
+			</div>
+		</div>
+		</div>
+		</footer>
+        <script lang="javascript">
+		    function search_field_toggle(){
+				var search_field_area = document.getElementById("search-field-area");
+				if(search_field_area.style.height == 0 || search_field_area.style.height == "0px"){
+					search_field_area.style.height = "inherit";
+					search_field_area.style.overflow = "visible";
+				}
+				else{
+					search_field_area.style.height = "0px";
+					search_field_area.style.overflow = "hidden";
+				}
+			}
+			function toggleNav(){
+				var nav_list = document.getElementById("main-nav-list");
+				if(nav_list.style.height == 0 || nav_list.style.height == "0px"){
+					nav_list.style.height = "inherit";
+				}
+				else{
+					nav_list.style.height = "0px";
+				}			    
+			}
+		</script>
+	</body>
+</html>
