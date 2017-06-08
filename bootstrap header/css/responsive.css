@@ -33,3 +33,12 @@
 		width: 230px;
 	}
 }
+@media only screen and (max-width: 600px){
+	.nav-btn{
+		margin-right: 0px;
+		font-size: 19px;
+	}
+	.logo-img{
+		width: 150px;
+	}
+}
