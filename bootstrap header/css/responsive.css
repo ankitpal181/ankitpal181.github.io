@@ -1,0 +1,29 @@
+@media only screen and (max-width: 767px){
+	nav{
+    	position: absolute;
+		z-index: 1000;
+	    height: 0px;
+        overflow: hidden;
+		right: 0px;
+		top: 170px;
+	}
+	.nav-list{
+		background-color: rgba(0,0,0,0.5);
+        padding: 10px 0px;
+		display: block;
+	}
+	.nav-list li{
+		padding: 40px 50px;
+		text-align: center;
+	}
+	.nav-btn{
+    	display: block;
+		background: none;
+	}
+	.product-name{
+		padding-top: 30px;
+	}
+	.product-area{
+		padding-top: 80px;
+	}
+}

@@ -1,0 +1,81 @@
+<html>
+    <head>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <link rel='stylesheet' href='css/main.css'>
+	    <link rel='stylesheet' href='css/responsive.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+	    <header>
+		    <div class="container">
+			    <div class="row">
+				    <div class="col-xs-6">
+					    <a href=""><img src="images/logo.png" class="logo-img"></a>
+					</div>
+				    <div class="col-xs-6">
+					    <nav id="nav-area">
+						    <ul class="nav-list">
+							    <a href=""><li id="item1" onmouseover="highlight_item('item1')" onmouseout="highlight_item_over('item1')">HOME</li></a>
+							    <a href=""><li id="item2" onmouseover="highlight_item('item2')" onmouseout="highlight_item_over('item2')">PRODUCTS</li></a>
+							    <a href=""><li id="item3" onmouseover="highlight_item('item3')" onmouseout="highlight_item_over('item3')">CONTACT US</li></a>
+							    <a href=""><li id="item4" onmouseover="highlight_item('item4')" onmouseout="highlight_item_over('item4')">ABOUT US</li></a>
+							</ul>
+						</nav>
+						<button class="btn btn-default nav-btn" onclick="display_nav_list();"><span class="fa fa-navicon"></span></button>
+					</div>
+				</div>
+				<div class="row product-area">
+				    <div class="col-sm-6">
+					    <center>
+					        <img src="images/product.png" class="product-img">
+					    </center>
+					</div>
+					<div class="col-sm-6">
+					    <center>
+					        <p class="product-para product-name">PRODUCT NAME</p>
+						    <p class="product-para product-details">THIS PARA CONTAINS DETAILS<br>ABOUT THE PRODUCT</p>
+						</center>
+					</div>
+				</div>
+			</div>
+		</header>
+		<article>
+		</article>
+		<footer style="background-color: rgb(50, 50, 70); padding-top: 93px; padding-bottom: 93px; margin-top: 50px;">
+		    <div class="container">
+			    <center>
+				    <p style="font-size: 40px; color: rgb(255, 255, 255)">THIS AREA CONTAINS FOOTER OF THE WEBSITE</p>
+				</center>
+			</div>
+		</footer>
+		<script lang="javascript">
+		    function display_nav_list(){
+			    if(window.innerWidth < 768){
+					var nav_area = document.getElementById("nav-area");
+					if(nav_area.style.height == 0 || nav_area.style.height == "0px"){
+						nav_area.style.height = "500px";
+					}
+					else{
+						nav_area.style.height = "0px";
+					}
+				}
+			}
+		    function highlight_item(item){
+			    if(window.innerWidth < 768){
+					var item = document.getElementById(item);
+					item.style.borderLeft = "5px solid rgb(255, 255, 255)";
+					item.style.backgroundColor = "rgba(255,255,255,0.1)";
+				}
+			}
+		    function highlight_item_over(item){
+			    if(window.innerWidth < 768){
+					var item = document.getElementById(item);
+					item.style.borderLeft = "none";
+					item.style.backgroundColor = "rgba(255,255,255,0)";
+				}
+			}
+			
+		</script>
+	</body>
+</html>

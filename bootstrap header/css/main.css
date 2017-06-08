@@ -1,0 +1,47 @@
+body{
+	background-image: url(../images/background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.logo-img{
+	padding-top: 20px;
+}
+nav{
+	float: right;
+	transition: all 2s;
+}
+.nav-list{
+	list-style: none;
+    display: flex;
+    font-family: proxima nova, sans-serif, arial;
+    font-size: 20px;
+}
+.nav-list li{
+	color: rgb(255, 255, 255);
+    padding: 40px 30px;
+	padding-right: 0px;
+}
+.product-area{
+	padding-top: 165px;
+}
+.product-para{
+	font-family: proxima nova, sans-serif, arial;
+    color: rgb(255, 255, 255);
+}
+.product-name{
+	font-size: 20px;
+	padding-top: 130px;
+}
+.product-details{
+	font-size: 19px;
+}
+.nav-btn{
+	float: right;
+    margin-right: 50px;
+    margin-top: 60px;
+    padding: 12px 15px;
+    font-size: 25px;
+	display: none;
+	color: rgb(255, 255, 255);
+	border: 2px solid rgb(255, 255, 255);
+}
