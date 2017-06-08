@@ -7,19 +7,19 @@ body{
 	padding-top: 20px;
 }
 nav{
-	float: right;
 	transition: all 2s;
 }
-.nav-list{
-	list-style: none;
-    display: flex;
-    font-family: proxima nova, sans-serif, arial;
-    font-size: 20px;
+.contact-info-para{
+	font-family: proxima nova, sans-serif, arial;
+    color: rgb(255, 255, 255);
 }
-.nav-list li{
-	color: rgb(255, 255, 255);
-    padding: 40px 30px;
-	padding-right: 0px;
+.contact-info-heading{
+	font-size: 20px;
+	padding-top: 40px;
+}
+.contact-info{
+	font-size: 18px;
+    padding-left: 100px;
 }
 .product-area{
 	padding-top: 165px;

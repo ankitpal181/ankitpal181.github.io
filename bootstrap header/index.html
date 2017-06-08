@@ -15,14 +15,14 @@
 					</div>
 				    <div class="col-xs-6">
 					    <nav id="nav-area">
-						    <ul class="nav-list">
-							    <a href=""><li id="item1" onmouseover="highlight_item('item1')" onmouseout="highlight_item_over('item1')">HOME</li></a>
-							    <a href=""><li id="item2" onmouseover="highlight_item('item2')" onmouseout="highlight_item_over('item2')">PRODUCTS</li></a>
-							    <a href=""><li id="item3" onmouseover="highlight_item('item3')" onmouseout="highlight_item_over('item3')">CONTACT US</li></a>
-							    <a href=""><li id="item4" onmouseover="highlight_item('item4')" onmouseout="highlight_item_over('item4')">ABOUT US</li></a>
-							</ul>
+						    <p class="contact-info-para contact-info-heading"> Contact Us :</p>
+							<p class="contact-info-para contact-info">
+							    xyz street, lane-3, abc city, United States - pin code<br>
+								cntry-code 8800263343<br>
+								xyz69@gmail.com
+							</p>
 						</nav>
-						<button class="btn btn-default nav-btn" onclick="display_nav_list();"><span class="fa fa-navicon"></span></button>
+						<button class="btn btn-default nav-btn" onclick="display_nav_list();">Contact Us<span id="arrow" style="margin-left: 10px;" class="fa fa-sort-down"></span></button>
 					</div>
 				</div>
 				<div class="row product-area">
@@ -53,26 +53,15 @@
 		    function display_nav_list(){
 			    if(window.innerWidth < 768){
 					var nav_area = document.getElementById("nav-area");
+					var arrow = document.getElementById("arrow");
 					if(nav_area.style.height == 0 || nav_area.style.height == "0px"){
-						nav_area.style.height = "500px";
+						nav_area.style.height = "300px";
+						arrow.setAttribute("class", "fa fa-sort-up");
 					}
 					else{
 						nav_area.style.height = "0px";
+						arrow.setAttribute("class", "fa fa-sort-down");
 					}
-				}
-			}
-		    function highlight_item(item){
-			    if(window.innerWidth < 768){
-					var item = document.getElementById(item);
-					item.style.borderLeft = "5px solid rgb(255, 255, 255)";
-					item.style.backgroundColor = "rgba(255,255,255,0.1)";
-				}
-			}
-		    function highlight_item_over(item){
-			    if(window.innerWidth < 768){
-					var item = document.getElementById(item);
-					item.style.borderLeft = "none";
-					item.style.backgroundColor = "rgba(255,255,255,0)";
 				}
 			}
 			

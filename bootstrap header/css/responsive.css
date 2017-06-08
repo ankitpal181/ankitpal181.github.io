@@ -3,18 +3,21 @@
     	position: absolute;
 		z-index: 1000;
 	    height: 0px;
+		width: 350px;
         overflow: hidden;
 		right: 0px;
 		top: 170px;
+		padding-left: 20px;
+        padding-right: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
 	}
-	.nav-list{
-		background-color: rgba(0,0,0,0.5);
-        padding: 10px 0px;
-		display: block;
+	.contact-info-heading{
+		display: none;
 	}
-	.nav-list li{
-		padding: 40px 50px;
-		text-align: center;
+	.contact-info{
+		padding-left: 0px;
+		padding-top: 20px;
+        padding-bottom: 20px;
 	}
 	.nav-btn{
     	display: block;
@@ -25,5 +28,8 @@
 	}
 	.product-area{
 		padding-top: 80px;
+	}
+	.product-img{
+		width: 230px;
 	}
 }
