@@ -1,28 +1,4 @@
 @media only screen and (max-width: 767px){
-	nav{
-    	position: absolute;
-		z-index: 1000;
-	    height: 0px;
-		width: 350px;
-        overflow: hidden;
-		right: 0px;
-		top: 170px;
-		padding-left: 20px;
-        padding-right: 20px;
-        background-color: rgba(0, 0, 0, 0.5);
-	}
-	.contact-info-heading{
-		display: none;
-	}
-	.contact-info{
-		padding-left: 0px;
-		padding-top: 20px;
-        padding-bottom: 20px;
-	}
-	.nav-btn{
-    	display: block;
-		background: none;
-	}
 	.product-name{
 		padding-top: 30px;
 	}
@@ -32,13 +8,14 @@
 	.product-img{
 		width: 230px;
 	}
-}
-@media only screen and (max-width: 600px){
-	.nav-btn{
-		margin-right: 0px;
-		font-size: 19px;
+	.contact-info-heading{
+		text-align: center;
+	}
+	.contact-info{
+		text-align: center;
+		padding-left: 0px;
 	}
 	.logo-img{
-		width: 151px;
+		float: none;
 	}
 }

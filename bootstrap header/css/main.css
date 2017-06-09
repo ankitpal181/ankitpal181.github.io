@@ -1,13 +1,11 @@
-body{
+article{
 	background-image: url(../images/background.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 .logo-img{
 	padding-top: 20px;
-}
-nav{
-	transition: all 2s;
+    float: left;
 }
 .contact-info-para{
 	font-family: proxima nova, sans-serif, arial;
@@ -34,14 +32,4 @@ nav{
 }
 .product-details{
 	font-size: 19px;
-}
-.nav-btn{
-	float: right;
-    margin-right: 50px;
-    margin-top: 60px;
-    padding: 12px 15px;
-    font-size: 25px;
-	display: none;
-	color: rgb(255, 255, 255);
-	border: 2px solid rgb(255, 255, 255);
 }
