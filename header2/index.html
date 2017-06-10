@@ -1,0 +1,79 @@
+<html>
+    <head>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <link rel='stylesheet' href='css/main.css'>
+	    <link rel='stylesheet' href='css/responsive.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+        <header>
+	        <div class="container">
+		        <div class="row">
+			        <div class="col-sm-4">
+				        <a href=""><center><img src="images/logo.png" class="logo-img"></center></a>
+				    </div>
+					<div class="col-sm-4">
+					    <center><img src="images/product.png" class="header-product-img"></center>
+					</div>
+			        <div class="col-sm-4">
+				        <nav id="nav-area">
+					        <p class="contact-info-para contact-info-heading"> Contact Us :</p>
+						    <p class="contact-info-para contact-info">
+						        xyz street, lane-3, abc city, United States - pin code<br>
+							    cntry-code 8800263343<br>
+							    xyz69@gmail.com
+						    </p>
+					    </nav>
+				    </div>
+			    </div>
+		    </div>
+	    </header>
+		<article>
+		    <div class="container-fluid">
+			    <div class="row">
+				    <img src="images/background.jpg" class="slide-img">
+				</div>
+		        <div class="row product-area">
+				    <div class="container">
+		                <div class="col-sm-6">
+			                <center>
+			                    <img src="images/product.png" class="product-img">
+			                </center>
+			            </div>
+			            <div class="col-sm-6">
+			                <center>
+			                    <p class="product-para product-name">PRODUCT NAME</p>
+				                <p class="product-para product-details">THIS PARA CONTAINS DETAILS<br>ABOUT THE PRODUCT</p>
+				            </center>
+			            </div>
+		            </div>
+				</div>
+			</div>
+		</article>
+		<footer style="background-color: rgb(50, 50, 70); padding-top: 93px; padding-bottom: 93px;">
+		    <div class="container">
+			    <center>
+				    <p style="font-size: 40px; color: rgb(255, 255, 255)">THIS AREA CONTAINS FOOTER OF THE WEBSITE</p>
+				</center>
+			</div>
+		</footer>
+		<script lang="javascript">
+		    function display_nav_list(){
+			    if(window.innerWidth < 768){
+					var nav_area = document.getElementById("nav-area");
+					var arrow = document.getElementById("arrow");
+					if(nav_area.style.height == 0 || nav_area.style.height == "0px"){
+						nav_area.style.height = "300px";
+						arrow.setAttribute("class", "fa fa-sort-up");
+					}
+					else{
+						nav_area.style.height = "0px";
+						arrow.setAttribute("class", "fa fa-sort-down");
+					}
+				}
+			}
+			
+		</script>
+	</body>
+</html>

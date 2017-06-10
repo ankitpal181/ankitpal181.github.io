@@ -1,0 +1,42 @@
+.logo-img{
+	padding-top: 20px;
+    float: left;
+	width: 150px;
+}
+.header-product-img{
+	width: 150px;
+    margin-top: 12px;
+}
+.contact-info-para{
+	font-family: proxima nova, sans-serif, arial;
+    color: rgb(10, 164, 156);
+}
+.contact-info-heading{
+	font-size: 18px;
+	padding-top: 14px;
+	margin-bottom: 0px;
+	color: rgb(57, 0, 147);
+}
+.contact-info{
+	font-size: 15px;
+    padding-left: 100px;
+}
+.slide-img{
+	width: 100%;
+}
+.product-area{
+	padding-top: 70px;
+    padding-bottom: 50px;
+	background-color: rgb(240, 248, 255);
+}
+.product-para{
+	font-family: proxima nova, sans-serif, arial;
+    color: rgb(10, 164, 156);
+}
+.product-name{
+	font-size: 20px;
+	padding-top: 130px;
+}
+.product-details{
+	font-size: 19px;
+}
