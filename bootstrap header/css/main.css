@@ -1,3 +1,7 @@
+@font-face {
+    font-family: proxima nova;
+    src: url(../fonts/proxima-nova-bold-591e16f880cd1.otf);
+}
 article{
 	background-image: url(../images/background.jpg);
 	background-repeat: no-repeat;
