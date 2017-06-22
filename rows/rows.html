@@ -1,0 +1,126 @@
+<html>
+    <head>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+	    <div class="">
+		    <div class="">
+				<div class="main-area">
+				    <header>
+					<div class="container">
+					    <div class="row">
+						    <div class="col-xs-4">
+    					        <img src="images/logo.png" class="logo-img">
+							</div>
+							<div class="col-xs-8">
+							    <button type="button" class="btn btn-default nav-btn" onclick="display_nav_list()">
+								    <span class="fa fa-navicon"></span>
+								</button>
+							    <ul class="nav-list" id="nav-list">
+								    <a href=""><li class="nav-list-item">HOME</li></a>
+								    <a href=""><li class="nav-list-item">PRODUCTS</li></a>
+								    <a href=""><li class="nav-list-item">CONTACT US</li></a>
+								    <a href=""><li class="nav-list-item">ABOUT US</li></a>
+								</ul>
+							</div>
+					    </div>
+					</div>
+					</header>
+					<article>
+					    <div class="">
+					        <img src="images/slide-img.jpg" class="slide-img">
+						</div>
+						<div class="container-fluid">
+						<div class="row para-area">
+						<div class="container">
+						    <center>
+						        <p class="para heading">
+						            Lorem ipsum
+						        </p>
+						        <p class="para">
+						            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia     deserunt mollit anim id est laborum.
+						        </p>
+						    </center>
+						</div>
+						</div>
+						<div class="row">
+						<div class="container table-area">
+						<div class="row">
+						    <div class="col-sm-3 pic-area">
+							    <img src="images/product1.jpg" class="row-slide-imgs">
+							</div>
+						    <div class="col-sm-3 pic-area">
+							    <img src="images/product2.jpg" class="row-slide-imgs">
+							</div>
+						    <div class="col-sm-3 pic-area">
+							    <img src="images/product3.jpg" class="row-slide-imgs">
+							</div>
+						    <div class="col-sm-3 pic-area">
+							    <img src="images/product4.jpg" class="row-slide-imgs">
+							</div>
+						</div>
+						<div class="row">
+						    <div class="col-sm-3 pic-area">
+							    <img src="images/product5.jpg" class="row-slide-imgs">
+							</div>
+						    <div class="col-sm-3 pic-area">
+							    <img src="images/product6.jpg" class="row-slide-imgs">
+							</div>
+						    <div class="col-sm-3 pic-area">
+							    <img src="images/product7.jpg" class="row-slide-imgs">
+							</div>
+						    <div class="col-sm-3 pic-area">
+							    <img src="images/product8.jpg" class="row-slide-imgs">
+							</div>
+						</div>
+						<div class="row">
+						    <div class="col-sm-3 pic-area">
+							    <img src="images/product9.jpg" class="row-slide-imgs">
+							</div>
+						    <div class="col-sm-3 pic-area">
+							    <img src="images/product10.jpg" class="row-slide-imgs">
+							</div>
+						    <div class="col-sm-3 pic-area">
+							    <img src="images/product11.jpg" class="row-slide-imgs">
+							</div>
+						    <div class="col-sm-3 pic-area">
+							    <img src="images/product12.jpg" class="row-slide-imgs">
+							</div>
+						</div>
+						</div>
+						</div>
+						</div>
+					</article>
+					<footer>
+					<div class="container">
+					    <center>
+					        <p class="footer-para footer-heading">
+						        Footer Section
+						    </p>
+					        <p class="footer-para">
+						        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia     deserunt mollit anim id est laborum.
+						    </p>
+						</center>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+		<script lang="javascript">
+		    function display_nav_list(){
+			    if(window.innerWidth < 767){
+					var nav_area = document.getElementById("nav-list");
+					if(nav_area.style.height == 0 || nav_area.style.height == "0px"){
+						nav_area.style.height = "initial";
+					}
+					else{
+						nav_area.style.height = "0px";
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

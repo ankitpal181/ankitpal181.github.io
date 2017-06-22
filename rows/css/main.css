@@ -1,0 +1,93 @@
+@font-face{
+	font-family: proxima nova;
+	src: url("fonts/proxima-nova-black-591f439040fb6.otf");
+}
+header{
+	padding: 15px 0px;
+}
+.logo-img{
+	width: 225px;
+}
+.nav-list{
+	list-style: none;
+    display: flex;
+    font-size: 16px;
+    font-family: proxima nova;
+    float: right;
+}
+.nav-list-item{
+	color: rgb(95, 158, 160);
+    padding: 15px 35px;
+}
+.slide-img{
+	width: 100%;
+    height: 420px;
+}
+.para-area{
+	background-color: rgb(245, 245, 245);
+}
+.para{
+	font-family: proxima nova;
+	font-size: 17px;
+	padding-bottom: 25px;
+}
+.heading{
+    font-size: 50px;
+    padding: 40px;
+    padding-bottom: 0px;
+}
+.table-area{
+	padding-top: 50px;
+}
+.row-slide-imgs{
+	width: 100%;
+	height: 200px;
+}
+.footer-para{
+	font-family: arial;
+	font-size: 17px;
+	color: rgb(255, 255, 255);
+}
+.footer-heading{
+    font-weight: 600;
+    font-size: 50px;
+    margin: 40px;
+    margin-bottom: 0px;
+}
+.pic-area{
+	border: 1px solid rgb(0, 255, 255);
+}
+footer{
+	padding-bottom: 20px;
+	background-color: rgb(15, 30, 35);
+	margin-top: 30px;
+}
+.nav-btn{
+	font-size: 35px;
+    padding: 10px 12px;
+	display: none;
+	float: right;
+    margin-right: 20px;
+}
+@media only screen and (max-width:991px){
+	.nav-list-item{
+		padding: 15px 20px;
+	}
+}
+@media only screen and (max-width:767px){
+	.row-slide-imgs{
+		height: inherit;
+	}
+	.nav-list{
+		display: block;
+        height: 0px;
+        overflow: hidden;
+        background-color: rgba(0,0,0,0.5);
+        position: absolute;
+        top: 88px;
+        right: 0px;
+	}
+	.nav-btn{
+		display: block;
+	}
+}
