@@ -1,0 +1,56 @@
+<html>
+    <head>
+	    <title>Landing Page</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+	    <iframe class="corporate-video-frame" width="100%" height="100%" src="https://www.youtube.com/embed/f5irxYAo5HM?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
+		<iframe class="real-estate-video-frame" width="100%" height="100%" src="https://www.youtube.com/embed/pd8oMGOIPPc?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
+	    <div class="wrapper">
+		    <header>
+			    <center>
+				    <a href="#"><img src="images/logo.png" class="logo"></a>
+				</center>
+			</header>
+			<main>
+			    <div class="main-division1">
+				    <a href="https://youtu.be/f5irxYAo5HM" class="button-link">
+					    <button class="video-btn" id="corporate-btn">CORPORATE</button>
+					</a>
+				</div>
+				<div class="main-division2">
+				    <a href="https://youtu.be/pd8oMGOIPPc" class="button-link">
+					    <button class="video-btn" id="real-estate-btn">REAL ESTATE</button>
+					</a>
+				</div>
+			</main>
+		</div>
+		<script>
+		    $(document).ready(function(){
+			    $("#corporate-btn").hover(function(){
+				    $(this).css("background", "rgba(255, 255, 255, 0.5)");
+					$(this).css("border-color", "rgb(27, 27, 27)");
+					$(this).css("color", "rgb(27, 27, 27)");
+					$(".corporate-video-frame").fadeIn("slow");
+				}, function(){
+				    $(this).css("background", "none");
+					$(this).css("border-color", "#fff");
+					$(this).css("color", "#fff");
+					$(".corporate-video-frame").fadeOut("slow");
+				});
+				$("#real-estate-btn").hover(function(){
+				    $(this).css("background", "rgba(255, 255, 255, 0.5)");
+					$(this).css("border-color", "rgb(27, 27, 27)");
+					$(this).css("color", "rgb(27, 27, 27)");
+					$(".real-estate-video-frame").fadeIn("slow");
+				}, function(){
+				    $(this).css("background", "none");
+					$(this).css("border-color", "#fff");
+					$(this).css("color", "#fff");
+					$(".real-estate-video-frame").fadeOut("slow");
+				});
+			});
+		</script>
+	</body>
+</html>
