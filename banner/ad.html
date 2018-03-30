@@ -1,0 +1,71 @@
+<html>
+    <head>
+	    <title>Download Button</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<style>
+		    body{
+			    margin: 0px;
+			}
+		    .download-btn{
+			    border: 3px solid #fff;
+                font-family: gotham;
+                font-size: 35px;
+                color: #fff;
+                background: none;
+				cursor: pointer;
+			}
+			@media only screen and (max-width: 760px) {
+			    .download-btn{
+					font-size: 30px;
+				}
+			}
+			@media only screen and (max-width: 650px) {
+			    .download-btn{
+					font-size: 25px;
+				}
+			}
+			@media only screen and (max-width: 468px) {
+			    .download-btn{
+					font-size: 20px;
+				}
+			}
+			@media only screen and (max-width: 300px) {
+			    .download-btn{
+					font-size: 15px;
+				}
+			}
+		</style>
+	</head>
+	<body id="body">
+	    <div class="container">
+		    <div class="row">
+			    <div class="col-md-12">
+				    <center>
+		                <button class="download-btn" id="download-btn"><span class="fa fa-download" id="download-icon"></span> Download Now</button>
+		            </center>
+				</div>
+			</div>
+		</div>
+		<script>
+		    $(document).ready(function(){
+			    setInterval(function(){
+				    $("#download-icon").fadeToggle();
+					var btnHeight = $("#download-btn").css("height");
+					var frameHeight = $("#body").css("height");
+					var btnHeightHalf = parseInt(btnHeight) / 2;
+					var frameHeightHalf = parseInt(frameHeight) / 2;
+					var marginTop = frameHeightHalf - btnHeightHalf;
+					$("#download-btn").css("margin-top", marginTop);
+				}, 300);
+			    $("#download-btn").hover(function(){
+				    $(this).css("border-color", "#272727");
+					$(this).css("color", "#272727");
+				}, function(){
+				    $(this).css("border-color", "#fff");
+					$(this).css("color", "#fff");
+				});
+			});
+		</script>
+	</body>
+</html>
