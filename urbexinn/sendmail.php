@@ -55,6 +55,6 @@
 	    $customerNumber = $_POST['customerNumber'];
 	    $customerEmailAddress = $_POST['customerEmailAddress'];
 	    $customerResidence = $_POST['customerResidence'];
-		echo send_mail_sales($productName, $productSize, $productMaterial, $customerName, $customerNumber, $customerEmailAddress, $customerResidence);
+		echo "Coming Soon";
 	}
 ?>
