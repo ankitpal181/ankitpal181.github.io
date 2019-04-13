@@ -25,7 +25,7 @@
                 var xmlDoc = xhttp.responseXML; //important to use responseXML here
                 alert(xmlDoc.getElementsByTagName("models")[0].nodeValue);
             }
-            alert(xhttp.status);
+            alert(xhttp.readyState+"    "+xhttp.status);
         };
         xhttp.open("GET", "assets/xml/product-data.xml", true);
         xhttp.send();
