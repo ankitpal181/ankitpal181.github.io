@@ -18,10 +18,11 @@
             if (xhttp.readyState == 4 && xhttp.status == 200) {
                 var xmlDoc = xhttp.responseXML; //important to use responseXML here
             }
+            alert(xmlDoc.getElementsByTagName("models").childNodes[0].nodeValue);
         };
         xhttp.open("GET", "product-data.xml", true);
         xhttp.send();
-        alert(xmlDoc.getElementsByTagName("models").childNodes[0].nodeValue);
+        
         /*if(model != xmlDoc.getElementsByTagName("models").childNodes[0].nodeValue) {
             document.getElementById("model").value = "";
             document.getElementById("model").placeholder = "*Invalid model.";
