@@ -27,7 +27,7 @@
             }
             alert(xhttp.status);
         };
-        xhttp.open("GET", "product-data.xml", true);
+        xhttp.open("GET", "assets/xml/product-data.xml", true);
         xhttp.send();
         
         /*if(model != xmlDoc.getElementsByTagName("models").childNodes[0].nodeValue) {
