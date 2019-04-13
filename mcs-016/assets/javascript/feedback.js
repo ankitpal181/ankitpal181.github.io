@@ -4,7 +4,7 @@
         var model = document.getElementById("model").value;
         var email = document.getElementById("email").value;
         var feedback = document.getElementById("feedback").value;
-        var alphaPattern = /[^a-z]/i;
+        var alphaPattern = /[^a-z ]/i;
         var emailPattern = /[^a-z0-9@.]/i;
         if(name.match(alphaPattern)) {
             document.getElementById("name").value = "";
