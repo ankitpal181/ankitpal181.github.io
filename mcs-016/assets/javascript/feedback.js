@@ -19,9 +19,9 @@
                 var xmlDoc = xhttp.responseXML; //important to use responseXML here
             }
         };
-        xhttp.open("GET", "books.xml", true);
+        xhttp.open("GET", "assets/xml/product-data.xml", true);
         xhttp.send();
-        alert(xmlDoc);
+        alert(xmlDoc.getElementsByTagName("models").childNodes[0].nodeValue);
         /*if(model != xmlDoc.getElementsByTagName("models").childNodes[0].nodeValue) {
             document.getElementById("model").value = "";
             document.getElementById("model").placeholder = "*Invalid model.";
