@@ -13,12 +13,18 @@
         else if(name == "") {
             document.getElementById("name").placeholder = "*Field cannot be left blank.";
         }
-        var xhttp = new XMLHttpRequest();
+        if (window.XMLHttpRequest) {
+            // code for modern browsers
+            var xhttp = new XMLHttpRequest();
+          } else {
+            // code for old IE browsers
+            var xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+         }
         xhttp.onreadystatechange = function() {
             if (xhttp.readyState == 4 && xhttp.status == 200) {
                 var xmlDoc = xhttp.responseXML; //important to use responseXML here
+                alert(xmlDoc.getElementsByTagName("models")[0].childNodes[0].nodeValue);
             }
-            alert(xmlDoc.getElementsByTagName("models").childNodes[0].nodeValue);
         };
         xhttp.open("GET", "product-data.xml", true);
         xhttp.send();
