@@ -27,7 +27,7 @@
             xhttp.onreadystatechange = function() {
                 if (xhttp.readyState == 4 && xhttp.status == 200) {
                     var xmlDoc = xhttp.responseXML; //important to use responseXML here
-                    alert(xmlDoc.getElementsByTagName("models")[0].childNodes[0].nodeValue);
+                    alert(xmlDoc.getElementsByTagName("models")[0].childNodes.length);
                     for(var i = 0; i < xmlDoc.getElementsByTagName("models")[0].childNodes.length; i++) {
                         if(model != xmlDoc.getElementsByTagName("models")[0].childNodes[i].nodeValue) {
                             if(i == xmlDoc.getElementsByTagName("models")[0].childNodes.length-1) {
