@@ -19,7 +19,7 @@
                 var xmlDoc = xhttp.responseXML; //important to use responseXML here
             }
         };
-        xhttp.open("GET", "../xml/product-data.xml", true);
+        xhttp.open("GET", "product-data.xml", true);
         xhttp.send();
         alert(xmlDoc.getElementsByTagName("models").childNodes[0].nodeValue);
         /*if(model != xmlDoc.getElementsByTagName("models").childNodes[0].nodeValue) {
