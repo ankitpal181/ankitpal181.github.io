@@ -20,22 +20,30 @@
             // code for old IE browsers
             var xhttp = new ActiveXObject("Microsoft.XMLHTTP");
          }
-        xhttp.onreadystatechange = function() {
-            if (xhttp.readyState == 4 && xhttp.status == 200) {
-                var xmlDoc = xhttp.responseXML; //important to use responseXML here
-                alert(xmlDoc.getElementsByTagName("models")[0].childNodes[0].nodeValue);
-            }
-        };
-        xhttp.open("GET", "assets/xml/product-data.xml", true);
-        xhttp.send();
-        
-        /*if(model != xmlDoc.getElementsByTagName("models").childNodes[0].nodeValue) {
-            document.getElementById("model").value = "";
-            document.getElementById("model").placeholder = "*Invalid model.";
-        }
-        else if(model == "") {
+        if(model == "") {
             document.getElementById("model").placeholder = "*Field cannot be left blank.";
-        }*/
+        }
+        else {
+            xhttp.onreadystatechange = function() {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    var xmlDoc = xhttp.responseXML; //important to use responseXML here
+                    alert(xmlDoc.getElementsByTagName("models")[0].childNodes[0].nodeValue);
+                    for(var i = 0; i < xmlDoc.getElementsByTagName("models")[0].childNodes.length; i++) {
+                        if(model != xmlDoc.getElementsByTagName("models")[0].childNodes[i].nodeValue) {
+                            if(i == xmlDoc.getElementsByTagName("models")[0].childNodes.length-1) {
+                                document.getElementById("model").value = "";
+                                document.getElementById("model").placeholder = "*Invalid model.";
+                            }
+                        }
+                        else {
+                            break;
+                        }
+                    }
+                }
+            };
+            xhttp.open("GET", "assets/xml/product-data.xml", true);
+            xhttp.send();
+        }
         if(email.match(emailPattern)) {
             document.getElementById("email").value = "";
             document.getElementById("email").placeholder = "*Cannot contain numbers or special characters.";
