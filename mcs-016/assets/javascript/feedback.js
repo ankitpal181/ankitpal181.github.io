@@ -21,7 +21,7 @@
         };
         xhttp.open("GET", "books.xml", true);
         xhttp.send();
-        //alert(xmlDoc.getElementsByTagName("models").childNodes[0].nodeValue);
+        alert(xmlDoc.getElementsByTagName("models").childNodes[0].nodeValue);
         /*if(model != xmlDoc.getElementsByTagName("models").childNodes[0].nodeValue) {
             document.getElementById("model").value = "";
             document.getElementById("model").placeholder = "*Invalid model.";
