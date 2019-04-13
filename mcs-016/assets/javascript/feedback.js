@@ -26,10 +26,9 @@
         else {
             xhttp.onreadystatechange = function() {
                 if (xhttp.readyState == 4 && xhttp.status == 200) {
-                    var xmlDoc = xhttp.responseXML; //important to use responseXML here
-                    alert(xmlDoc.getElementsByTagName("m")[0].childNodes[0].nodeValue);
+                    var xmlDoc = xhttp.responseXML;
                     for(var i = 0; i < xmlDoc.getElementsByTagName("m").length; i++) {
-                        if(model != xmlDoc.getElementsByTagName("m")[i].childNodes[0].nodeValue) {
+                        if(model.toUpperCase() != xmlDoc.getElementsByTagName("m")[i].childNodes[0].nodeValue) {
                             if(i == xmlDoc.getElementsByTagName("m").length-1) {
                                 document.getElementById("model").value = "";
                                 document.getElementById("model").placeholder = "*Invalid model.";
