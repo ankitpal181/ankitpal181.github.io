@@ -13,17 +13,18 @@
         else if(name == "") {
             document.getElementById("name").placeholder = "*Field cannot be left blank.";
         }
-        if (window.XMLHttpRequest) {
-            // code for modern browsers
-            var xhttp = new XMLHttpRequest();
-          } else {
-            // code for old IE browsers
-            var xhttp = new ActiveXObject("Microsoft.XMLHTTP");
-         }
         if(model == "") {
             document.getElementById("model").placeholder = "*Field cannot be left blank.";
         }
         else {
+            if (window.XMLHttpRequest) {
+                // code for modern browsers
+                var xhttp = new XMLHttpRequest();
+            }
+            else {
+                // code for old IE browsers
+                var xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
             xhttp.onreadystatechange = function() {
                 if (xhttp.readyState == 4 && xhttp.status == 200) {
                     var xmlDoc = xhttp.responseXML;
