@@ -38,19 +38,21 @@
         document.getElementById("no-model-selected").style.display = "block";
         document.getElementById("model-selected").style.display = "none";
 
+        var url = window.location.href;
+        
         document.getElementById("model-smc00").onclick = function() {
-            window.location.href = "file:///home/ankit/Desktop/mca%20assignments/assignments/mscl-016/specifications.html?model=smc00";
+            window.location.href = url+"?model=smc00";
         }
         document.getElementById("model-smc01").onclick = function() {
-            window.location.href = "file:///home/ankit/Desktop/mca%20assignments/assignments/mscl-016/specifications.html?model=smc01";
+            window.location.href = url+"?model=smc01";
         }
         document.getElementById("model-smc02").onclick = function() {
-            window.location.href = "file:///home/ankit/Desktop/mca%20assignments/assignments/mscl-016/specifications.html?model=smc02";
+            window.location.href = url+"?model=smc02";
         }
         document.getElementById("model-smc03").onclick = function() {
-            window.location.href = "file:///home/ankit/Desktop/mca%20assignments/assignments/mscl-016/specifications.html?model=smc03";
+            window.location.href = url+"?model=smc03";
         }
         document.getElementById("model-smc04").onclick = function() {
-            window.location.href = "file:///home/ankit/Desktop/mca%20assignments/assignments/mscl-016/specifications.html?model=smc04";
+            window.location.href = url+"?model=smc04";
         }
     }
