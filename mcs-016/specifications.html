@@ -7,11 +7,11 @@
     </head>
     <body>
         <header>
-            <div class="nav-icon close" id="nav-icon">
-                <span>&#x26CC;</span>
+            <div class="nav-icon close">
+                <span id="nav-icon">&#10005;</span>
             </div>
             <center>
-                <a href="home.html">
+                <a href="index.html">
                     <img src="assets/images/logos/logo.png" alt="logo.png" class="logo" />
                 </a>
             </center>
@@ -19,39 +19,55 @@
         <div class="container">
         <nav>
             <ul>
-                <a href="home.html"><li id="home-link">Home</li></a>
+                <a href="index.html"><li id="home-link">Home</li></a>
                 <a href="models.html"><li id="models-link">Models</li></a>
                 <a href="specifications.html"><li id="specifications-link">Specifications</li></a>
                 <a href="feedback.html"><li id="feedback-link">Feedback</li></a>
             </ul>
         </nav>
         <main>
-            <section>
-                <p class="section-heading">Model Number</p>
-                <div>
+            <section id="no-model-selected">
+                <center>
+                    <p>Please select a model:</p>
+                    <select>
+                        <option id="model-smc00">SMC00</option>
+                        <option id="model-smc01">SMC01</option>
+                        <option id="model-smc02">SMC02</option>
+                        <option id="model-smc03">SMC03</option>
+                        <option id="model-smc04">SMC04</option>
+                    </select>
+                </center>
+            </section>
+            <section id="model-selected">
+                <center>
+                <p class="section-heading" id="specific-model-number"></p>
+                <div class="wrapper">
                     <div>
                         <img src="" id="specific-model-img" />
                     </div>
-                    <div>
-                        <p>Processor: </p>
-                        <p>Memory: </p>
-                        <p>Price: </p>
-                        <p>Launched in </p>
+                    <div class="specs-info-div">
+                        <div>
+                            <p id="specific-model-proccessor"></p>
+                            <p id="specific-model-memory"></p>
+                            <p id="specific-model-price"></p>
+                            <p id="specific-model-launched"></p>
+                        </div>                    
+                        <div>
+                            <p id="specific-model-screen"></p>
+                            <p id="specific-model-camera"></p>
+                            <p id="specific-model-os"></p>
+                            <p>Colours Available:</p>
+                            <select>
+                                <option>Black</option>
+                                <option>White</option>
+                                <option>Blue</option>
+                            </select>
+                            <p id="specific-model-warrenty"></p>
+                            <p id="specific-model-stock"></p>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <p>Screen Size:</p>
-                    <p>Camera Resolution:</p>
-                    <p>OS:</p>
-                    <p>Colours Available:</p>
-                    <select>
-                        <option>Black</option>
-                        <option>White</option>
-                        <option>Blue</option>
-                    </select>
-                    <p>Warrenty:</p>
-                    <p>In Stock:</p>
-                </div>
+                </center>
             </section>
         </main>
     </div>
