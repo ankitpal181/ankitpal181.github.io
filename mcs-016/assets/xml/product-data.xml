@@ -2,5 +2,79 @@
 <products>
     <models>
         <m>SMC00</m>
+        <m>SMC01</m>
+        <m>SMC02</m>
+        <m>SMC03</m>
+        <m>SMC04</m>
     </models>
+    <proccessor>
+        <SMC00proccessor>Qualcomm Snapdragon 200</SMC00proccessor>
+        <SMC01proccessor>Qualcomm Snapdragon 670</SMC01proccessor>
+        <SMC02proccessor>Qualcomm Snapdragon 835</SMC02proccessor>
+        <SMC03proccessor>Qualcomm Snapdragon 845</SMC03proccessor>
+        <SMC04proccessor>Qualcomm Snapdragon 855</SMC04proccessor>
+    </proccessor>
+    <memory>
+        <SMC00memory>8</SMC00memory>
+        <SMC01memory>16</SMC01memory>
+        <SMC02memory>16</SMC02memory>
+        <SMC03memory>64</SMC03memory>
+        <SMC04memory>128</SMC04memory>
+    </memory>
+    <price>
+        <SMC00price>4000</SMC00price>
+        <SMC01price>8000</SMC01price>
+        <SMC02price>10000</SMC02price>
+        <SMC03price>30000</SMC03price>
+        <SMC04price>60000</SMC04price>
+    </price>
+    <launched>
+        <SMC00launched>2001</SMC00launched>
+        <SMC01launched>2004</SMC01launched>
+        <SMC02launched>2005</SMC02launched>
+        <SMC03launched>2013</SMC03launched>
+        <SMC04launched>2018</SMC04launched>
+    </launched>
+    <screen>
+        <SMC00screen>640 x 1136</SMC00screen>
+        <SMC01screen>640 x 1136</SMC01screen>
+        <SMC02screen>750 x 1334</SMC02screen>
+        <SMC03screen>1080 x 1920</SMC03screen>
+        <SMC04screen>1440 x 2960</SMC04screen>
+    </screen>
+    <camera>
+        <SMC00camera>5</SMC00camera>
+        <SMC01camera>8</SMC01camera>
+        <SMC02camera>13</SMC02camera>
+        <SMC03camera>13</SMC03camera>
+        <SMC04camera>18</SMC04camera>
+    </camera>
+    <os>
+        <SMC00os>Android: Gingerbread</SMC00os>
+        <SMC01os>Android: Gingerbread</SMC01os>
+        <SMC02os>Android: Kitkat</SMC02os>
+        <SMC03os>Android: Lollipop</SMC03os>
+        <SMC04os>Android: Marshmallow</SMC04os>
+    </os>
+    <warrenty>
+        <SMC00warrenty>2</SMC00warrenty>
+        <SMC01warrenty>2</SMC01warrenty>
+        <SMC02warrenty>3</SMC02warrenty>
+        <SMC03warrenty>3</SMC03warrenty>
+        <SMC04warrenty>3</SMC04warrenty>
+    </warrenty>
+    <stock>
+        <SMC00stock>production stopped</SMC00stock>
+        <SMC01stock>10</SMC01stock>
+        <SMC02stock>30</SMC02stock>
+        <SMC03stock>10</SMC03stock>
+        <SMC04stock>5</SMC04stock>
+    </stock>
+    <comments>
+        <SMC00comments>Not so good.</SMC00comments>
+        <SMC01comments>More durable than previous model. Hope to see more better models in future.</SMC01comments>
+        <SMC02comments>Got more than what's paid. Best in it's range.</SMC02comments>
+        <SMC03comments>Awesome design and performance.</SMC03comments>
+        <SMC04comments>Best of smartcomm till now.</SMC04comments>
+    </comments>
 </products>
