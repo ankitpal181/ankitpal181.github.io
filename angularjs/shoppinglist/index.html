@@ -1,1 +1,93 @@
-
+<html>
+    <head>
+        <title>Shopping List App</title>
+        <style>
+            div:first-child {
+                width: 30%;
+                height: auto;
+                background: #f1f1f1;
+                box-shadow: 0px 2px 5px 0px #b0b0b0;
+                font-family: sans-serif;
+            }
+            span {
+                float: right;
+                cursor: pointer;
+                font-size: 20px;
+            }
+            ul {
+                list-style: none;
+                font-size: 18px;
+                margin: 0px;
+                padding: 0px;
+            }
+            li {
+                padding: 18px;
+                background-color: #fff;
+                margin-bottom: 1px;
+            }
+            p {
+                font-size: 26px;
+                padding: 26px;
+                margin: 0px;
+            }
+            div:first-child div{
+                display: inline-flex;
+                padding: 25px 0px;
+                width: 100%;
+            }
+            input {
+                padding: 10px;
+                width: 70%;
+                margin-left: 5%;
+                border: 1px solid #d1d1d1;
+            }
+            button {
+                padding: 10px 20px;
+                width: 20%;
+                margin-right: 5%;
+                color: #FFF;
+                border: none;
+                background-color: #0080FF;
+            }
+            p:last-child {
+                color: #f00;
+                font-size: 15px;
+                padding: 0px 0px 25px 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div ng-app="shoppingListApp" ng-controller="appCtrl">
+            <p>My Shopping List</p>
+            <ul>
+                <li ng-repeat="listItem in items">{{listItem}}<span ng-click="removeItem($index)">&times;</span></li>
+            </ul>
+            <div>
+                <input type="text" placeholder="Enter List Item" ng-model="newItem" />
+                <button type="button" ng-click="addItem()">Add</button>
+            </div>
+            <p>{{errorText}}</p>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script>
+            var app = angular.module('shoppingListApp', []);
+            app.controller('appCtrl', function($scope) {
+                $scope.items = [];
+                $scope.addItem = function() {
+                    if(!$scope.newItem) {return;}
+                    $scope.errorText = "";
+                    if($scope.items.indexOf($scope.newItem) == -1) {
+                        $scope.items.push($scope.newItem);
+                    }
+                    else {
+                        $scope.errorText = "Item already exists in the list.";
+                    }
+                }
+                $scope.removeItem = function(index) {
+                    $scope.errorText = "";
+                    $scope.items.splice(index, 1);
+                }
+            });
+        </script>
+    </body>
+</html>
