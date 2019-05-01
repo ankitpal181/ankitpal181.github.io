@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Timer App</title>
+        <style>
+            body {
+                background-color: #000;
+            }
+            .app-container {
+                width: 350px;
+                background-color: #FFFFFF40;
+                font-family: sans-serif;
+                padding: 20px;
+                padding-bottom: 40px;
+                color: #fff;
+                box-shadow: 0px 2px 5px 0px #0080ff;
+            }
+            .clock-container {
+                font-size: 30px;
+            }
+            .stop-watch-container {
+                width: 50%;
+                font-size: 50px;
+                border: 3px dotted;
+                border-radius: 100%;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <div ng-app="timerApp" class="app-container">
+                <div ng-controller="clockCtrl" class="clock-container">
+                    <p ng-bind="currentTime"></p>
+                </div>
+                <p ng-bind="timeElapsed"></p>
+                <div ng-controller="stopWatchCtrl" ng-click="updateCounterState(counter)" class="stop-watch-container">
+                    <p><span ng-bind="counter">
+                </div>
+            </div>
+        </center>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script>
+            var app = angular.module("timerApp", []);
+            app.controller("clockCtrl", function($scope, $interval) {
+                $scope.currentTime = new Date().toLocaleTimeString();
+                $interval(function() {
+                    $scope.currentTime = new Date().toLocaleTimeString();
+                }, 1000);
+            });
+            app.controller("stopWatchCtrl", function($scope, $interval, $rootScope) {
+                $scope.counter = 0;
+                $scope.updateCounterState = function(counter) {
+                    if(counter == 0) {
+                        $interval.cancel($scope.counterState);
+                        $rootScope.timeElapsed = "";
+                        $scope.counterState = $interval(function() {
+                            $scope.counter += 1;
+                        }, 1000);
+                    }
+                    else {
+                        $interval.cancel($scope.counterState);
+                        $rootScope.timeElapsed = $scope.counter+" seconds elapsed";
+                        $scope.counter = 0;
+                    }
+                };
+            });
+        </script>
+    </body>
+</html>
