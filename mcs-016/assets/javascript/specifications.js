@@ -40,19 +40,8 @@
 
         var url = window.location.href;
         
-        document.getElementById("model-smc00").onclick = function() {
-            window.location.href = url+"?model=smc00";
-        }
-        document.getElementById("model-smc01").onclick = function() {
-            window.location.href = url+"?model=smc01";
-        }
-        document.getElementById("model-smc02").onclick = function() {
-            window.location.href = url+"?model=smc02";
-        }
-        document.getElementById("model-smc03").onclick = function() {
-            window.location.href = url+"?model=smc03";
-        }
-        document.getElementById("model-smc04").onclick = function() {
-            window.location.href = url+"?model=smc04";
-        }
+        document.getElementById("model-list").onclick = function() {
+            var model = document.getElementById("model-list").value;
+            window.location.href = url+"?model="+model;
+        };
     }
