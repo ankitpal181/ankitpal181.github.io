@@ -25,10 +25,6 @@
             .sort-button-container {
                 width: 100%;
             }
-            .sort-button {
-                width: auto;
-                float: right;
-            }
             ul {
                 list-style: none;
                 padding: 0px;
@@ -49,9 +45,10 @@
             }
             .switch {
                 position: relative;
-                display: inline-block;
                 width: 60px;
-                height: 34px;
+                height: 20px;
+                float: right;
+                margin-top: 5px;
             }
             .switch input { 
                 opacity: 0;
@@ -68,14 +65,15 @@
                 background-color: #ccc;
                 -webkit-transition: .4s;
                 transition: .4s;
+                width: 49px;
             }
             .slider:before {
                 position: absolute;
                 content: "";
-                height: 26px;
-                width: 26px;
+                height: 15px;
+                width: 15px;
                 left: 4px;
-                bottom: 4px;
+                bottom: 2px;
                 background-color: white;
                 -webkit-transition: .4s;
                 transition: .4s;
