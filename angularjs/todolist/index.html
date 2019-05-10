@@ -1,1 +1,143 @@
-
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To Do List</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <style>
+            .app-container {
+                width: 80%;
+                padding: 18px;
+                background-color: #00bfff;
+                display: flex;
+            }
+            .list-container {
+                width: 30%;
+                background: #efefef;
+                padding: 20px 0px;
+                margin: 0px 20px;
+                box-shadow: 0px 2px 5px 0px #666;
+            }
+            .list-heading {
+                font-family: sans-serf, arial;
+                font-size: 22px;
+                margin: 0px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+            .btn-container {
+                width: 90%;
+                display: inline-flex;
+            }
+            .add-task-textfield {
+                width: 80%;
+                font-size: 18px;
+                padding: 5px;
+                border: 2px solid #afafaf;
+                border-radius: 5px 0px 0px 5px;
+                border-right: none;
+            }
+            .add-task-btn {
+                width: 20%;
+                font-weight: 600;
+                background-color: #0080ff;
+                color: #fff;
+                border: none;
+                border-radius: 0px 5px 5px 0px;
+                border-left: none;
+            }
+            .list {
+                padding: 0px;
+            }
+            .list-item {
+                list-style: none;
+                text-align: left;
+                font-family: sans-serif, arial;
+                font-size: 16px;
+                border-top: 1px solid #aaa;
+                padding: 10px;
+            }
+            .list-item:hover {
+                border-top: none;
+                box-shadow: 2px 2px 5px 0px #aaa;
+            }
+            .task-action-btn {
+                float: right;
+                cursor: pointer;
+                margin: 0px 5px;
+            }
+            @media only screen and (max-width: 767px) {
+                .app-container {
+                    display: block;
+                }
+                .list-container {
+                    width: 85%;
+                    margin: 15px 0px;
+                }
+                .add-task-textfield {
+                    padding: 0px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <div ng-app="toDoListApp" class="app-container">
+                <div ng-controller="toDoCtrl" class="list-container">
+                    <p class="list-heading">To Do</p>
+                    <ul class="list">
+                        <li ng-repeat="task in pendingTasks track by $index" class="list-item"><span ng-bind="task"></span><span ng-click="moveTask($index)" class="fas fa-angle-right task-action-btn" title="Start Task"></span></li>
+                    </ul>
+                    <div class="btn-container">
+                        <input type="text" ng-model="newTask" class="add-task-textfield" placeholder="Enter Task">
+                        <button ng-click="addTask(newTask)" class="add-task-btn">ADD</button>
+                    </div>
+                </div>
+                <div ng-controller="inProcessCtrl" class="list-container">
+                    <p class="list-heading">Doing</p>
+                    <ul class="list">
+                        <li ng-repeat="task in tasksInProcess track by $index" class="list-item"><span ng-bind="task"></span><span ng-click="moveTask($index)" class="fas fa-thumbs-up task-action-btn" title="Task Done"></span></li>
+                    </ul>
+                </div>
+                <div ng-controller="doneCtrl" class="list-container">
+                    <p class="list-heading">Done</p>
+                    <ul class="list">
+                        <li ng-repeat="task in tasksDone track by $index" class="list-item"><span ng-bind="task"></span><span ng-click="removeTask($index)" class="fas fa-times task-action-btn" title="Remove Task"></span><span ng-click="moveTask($index)" class="fas fa-undo-alt task-action-btn" title="Undo Task"></span></li>
+                    </ul>
+                </div>
+            </div>
+        </center>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script>
+            var app = angular.module("toDoListApp", []);
+            app.controller("toDoCtrl", function($scope, $rootScope) {
+                $rootScope.pendingTasks = [];
+                $scope.addTask = function(task) {
+                    $rootScope.pendingTasks.push(task);
+                    $scope.newTask = "";
+                }
+                $scope.moveTask = function(index) {
+                    $rootScope.tasksInProcess.push($scope.pendingTasks[index]);
+                    $rootScope.pendingTasks.splice(index, 1);
+                }
+            });
+            app.controller("inProcessCtrl", function($scope, $rootScope) {
+                $rootScope.tasksInProcess = [];
+                $scope.moveTask = function(index) {
+                    $rootScope.tasksDone.push($scope.tasksInProcess[index]);
+                    $rootScope.tasksInProcess.splice(index, 1);
+                }
+            });
+            app.controller("doneCtrl", function($scope, $rootScope) {
+                $rootScope.tasksDone = [];
+                $scope.moveTask = function(index) {
+                    $rootScope.tasksInProcess.push($scope.tasksDone[index]);
+                    $rootScope.tasksDone.splice(index, 1);
+                }
+                $scope.removeTask = function(index) {
+                    $rootScope.tasksDone.splice(index, 1);
+                }
+            });
+        </script>
+    </body>
+</html>
